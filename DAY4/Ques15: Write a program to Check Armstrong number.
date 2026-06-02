@@ -1,0 +1,35 @@
+import java.util.*;
+public class p15
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n=sc.nextInt();
+        int t=n;
+        int c=0;
+        while(t!=0)
+        {
+            c++;
+            t=t/10;
+        }
+        t=n;
+        int sum=0;
+        while(t>0)
+        {
+            int r=t%10;
+            int p=1;
+            for(int i=0; i<c;i++)
+            {
+                p=p*r;
+            }
+            sum=sum+p;
+            t=t/10;
+            
+        }
+        if(sum==n)
+            System.out.println(n+" is an armstrong number.");
+        else 
+            System.out.println(n+" is not an armstrong number.");
+    }
+}
