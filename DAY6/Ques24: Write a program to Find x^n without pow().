@@ -1,0 +1,16 @@
+import java.util.*;
+public class p24
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the base (x): ");
+        int x=sc.nextInt();
+        System.out.println("Enter exponent (n): ");
+        int n=sc.nextInt();
+        int r=1;
+        for(int i=1;i<=n;i++)
+            r=r*x;
+        System.out.println(x+"^"+n+":"+r);
+    }
+}
