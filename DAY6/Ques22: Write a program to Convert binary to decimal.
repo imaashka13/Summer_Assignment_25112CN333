@@ -1,0 +1,20 @@
+import java.util.*;
+public class p22
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a binary number:");
+        int bin=sc.nextInt();
+        int dec=0;
+        int b=1;   //to represent the base of decimal number
+        while(bin>0)
+        {
+            int r= bin%10;
+            bin= bin/10;
+            dec= dec + r*b;
+            b=b*2;
+        }
+        System.out.println("Decimal number: "+ dec);
+    }
+}
