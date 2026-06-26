@@ -1,0 +1,21 @@
+package DAY11;
+
+import java.util.*;
+public class p44 
+{
+    public static int Factorial(int n) 
+    {
+        int f=1;
+        for(int i=1;i<=n;i++)
+            f*= i;
+        return f;
+    }
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        int f = Factorial(num);
+        System.out.println("Factorial of " + num + " = " + f);
+    }
+}

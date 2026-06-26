@@ -1,0 +1,20 @@
+import java.util.*;
+public class p5
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n=sc.nextInt();
+        int a=n;
+        int sum=0;
+        int r;
+        while(n>0)
+        {
+            r=n%10;
+            sum=sum+r;
+            n=n/10;
+        }
+        System.out.println("Sum of digits of "+a+": "+sum);
+    }
+}

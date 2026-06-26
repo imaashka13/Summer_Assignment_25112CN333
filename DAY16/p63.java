@@ -1,0 +1,36 @@
+package DAY16;
+
+
+import java.util.*;
+public class p63 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter array size: ");
+        int n = sc.nextInt();
+        int a[]=new int[n];
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < n; i++)
+            a[i] = sc.nextInt();
+        System.out.print("Enter target sum: ");
+        int sum = sc.nextInt();
+        boolean f = false;
+        for (int i = 0; i < n; i++) 
+        {
+            for (int j = i + 1; j < n; j++) 
+            {
+                if (a[i] + a[j] == sum)
+                {
+                    System.out.println("Pair found: "+a[i]+" and "+a[j]);
+                    f=true;
+                    break;
+                }
+            }
+            if(f==true)
+                break;
+        }
+        if(f==false)
+            System.out.println("No pair found.");
+    }
+}

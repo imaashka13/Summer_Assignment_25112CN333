@@ -1,0 +1,28 @@
+package DAY5;
+
+import java.util.*;
+public class p17
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n=sc.nextInt();
+        if(n<=1)
+            System.out.println("Invalid Input");
+        else
+        {
+            int sum=0;
+            for(int i=1;i<=n/2;i++)
+            {
+                if(n%i==0)
+                    sum=sum+i;  //to find the sum of factors
+
+            }
+             if(sum==n)
+                 System.out.println("The entered number "+n+" is a perfect number.");
+             else
+                 System.out.println("The entered number "+n+" is not a perfect number.");
+        }
+    }
+}
